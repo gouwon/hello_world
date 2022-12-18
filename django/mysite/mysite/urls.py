@@ -19,3 +19,10 @@ from django.urls import path
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
+
+from django.http import HttpResponse
+
+def hello_world(request):
+    return HttpResponse('Hello World!')
+
+urlpatterns.append(path('', hello_world, name='hello_world'))
