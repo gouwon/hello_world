@@ -1,0 +1,9 @@
+[INVENTORY_LINUX]
+mio-linux ansible_host={manage_node_ip} ansible_connection=ssh ansible_user={manage_node_user} ansible_ssh_pass={manage_node_password}
+
+[INVENTORY_LINUX:vars]
+ansible_become=yes
+ansible_become_method=sudo
+
+[all:children]
+INVENTORY_LINUX

@@ -1,0 +1,14 @@
+---
+- name: Hello World
+  hosts: all
+  gather_facts: yes
+  collections:
+    - ansible.builtin.template
+
+  tasks:
+  - name: Ping
+    ansible.builtin.ping:
+  - name: Hello World
+    ansible.builtin.debug:
+      msg: Hello World
+
