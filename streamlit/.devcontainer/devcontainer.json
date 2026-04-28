@@ -1,0 +1,13 @@
+{
+	"name": "Streamlit Dev Container",
+	"build": { "dockerfile": "Dockerfile" },
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python"
+			]
+		}
+	},
+	"forwardPorts": [8501],
+	"postCreateCommand": "pip install -r requirements.txt"
+}
